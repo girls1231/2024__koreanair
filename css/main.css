@@ -1,0 +1,227 @@
+@charset "utf-8";
+
+header{
+  width: 100%;
+  height: 68px;
+  background-color: var(--mainColor1);
+}
+h3{text-indent: -999999px; font-size: 10px;}
+
+header h1{
+  width: 230px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.login_btn,.toggle_btn{
+  background: url(../images/btn_sprite.png);
+  text-indent: -99999px;
+  display: inline-block;
+  width: 48px;  height: 48px;
+  position: absolute; top: 10px;
+}
+.login_btn{
+  background-position: -48px 0;
+  right: 10px;
+}
+
+.toggle_btn{
+  background-position: 0 0;
+  left: 10px;
+}
+
+/* 회원가입 서식 */
+#join_form{
+  width: 100%; height: 100%;
+  margin: 0 auto;
+}
+
+/* 로그인 서식 */
+.login{
+  margin: 0 auto;  
+  width: 100%;
+  height: 100%;
+}
+
+.id_login{
+  position: absolute;
+  top: 10px; right: 10px;
+  color: blue;
+}
+.id_login span{
+  display: block;
+  line-height: 30px;
+}
+
+/* 아이디 체크 */
+.id_check{
+  color: red;
+}
+
+/* 메인서식 */
+
+.main_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+/* 토글메뉴 */
+.toggle_menu{
+  background-color: rgba(0,0,0,0.8);
+  position: fixed; 
+  width: 100%; height: 100%;
+  top: 0px; left: 0px;
+  display: none;
+  width: 100%;
+  z-index: 2;
+}
+
+.toggle_inner{
+  height: 100%;   width: 80%; 
+  background-color: var(--mainColor1);
+  z-index: 3;
+}
+.toggle_inner > div{
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.toggle_inner > div >.fa-x,.toggle_inner ul li{  cursor: pointer;}
+.toggle_inner > div >.fa-x{font-size: 35px; color: white;}
+.toggle_inner ul li{
+  line-height: 35px;
+  font-size: 20px;
+  text-indent: 10px;
+  color: white; font-size: 20px; 
+}
+.toggle_inner ul .toggle_list ul{
+  overflow: hidden;
+  display: none;
+}
+.toggle_inner ul .toggle_list ul li{
+  background-color: white;
+  color:#333;
+}
+.toggle_inner ul .toggle_list ul li a{
+  display: block;
+  text-indent: 20px;
+}
+
+.toggle_inner ul .toggle_list{
+  background-color: var(--mainColor1);
+}
+
+/* 토글메뉴 열고 닫기 */
+.toggle_list input[type="checkbox"]{
+  display: none;
+}
+
+.toggle_list input[type="checkbox"]:checked ~ ul{
+  display: block;
+}
+
+
+/* 메인 */
+.main_grid div{
+  width: 100%;
+}
+.grid1{      
+grid-area : 1/1/3/3;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+footer{
+  text-align: center;
+  height: 100px;
+}
+footer div{
+  margin-top: 20px;
+}
+footer > div >div{
+  margin-top: 10px;
+}
+footer ul{
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li{
+  padding: 0 10px;
+}
+
+footer ul li::before{
+  content: "|";
+  width: 1px;
+  height: 8px;
+  background-color: #333;
+  margin-right: 15px;
+}
+
+footer ul li:first-child:before{
+  content: "";
+  margin-right: 15px;
+}
+
+
+/* register.php */
+.register{
+  width: 80%;
+  max-width: 400px;
+  height: 100vh;
+  margin: 100px auto;
+}
+.register label[for="mb_id"],
+.register label[for="mb_password"],
+.register label[for="mb_name"] {
+  display: none;
+}
+.register h2{
+  text-align: center;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin: 80px 0px 50px 0;
+}
+
+.register input[type="text"],
+.register input[type="password"]
+{
+  width: 100%;
+  height: 30px;
+  border: none;
+  margin: 5px 0;
+  padding: 0px;
+}
+
+.register p:last-child{
+  display: flex;
+  justify-content: space-between;
+}
+.register input[type="submit"],
+.register input[type="reset"]{
+  width: 48%; height: 30px;
+  border-radius: 3px;
+  border: none;
+  padding: 0px;
+  margin-top: 30px;
+  color: white;
+}
+.register input[type="submit"]{
+  background-color: blue;
+}
+.register input[type="reset"]{
+  background-color: gray;
+}
+
+
+
+
+
+

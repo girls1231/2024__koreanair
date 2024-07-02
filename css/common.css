@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/* body, root, main, sub */
+
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
+body{
+  font-family: "고운 바탕", sans-serif;
+  font-size: var(--font13);
+  color:var(--txtColor1);
+  background: linear-gradient(to bottom, #5db9d2 30%, #dadada 30%);
+  height : 100vh;
+}
+
+:root{
+  --font11: 0.68rem;
+  --font12: 0.75rem;
+  --font13: 0.81rem;
+  --font16: 1rem;
+  --font20: 1.25rem;
+
+  --mainColor1: #5db9d2;
+  --txtColo1r:#333;
+}
+
+a{
+  font-family: "고운 바탕", sans-serif;
+  font-size: var(--font13);
+  color:var(--txtColor1);
+  text-decoration: none;
+}
+
+img{width: 100%;}
+
